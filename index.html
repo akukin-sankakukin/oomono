@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <title>おおもの</title>
     <style>
@@ -24,6 +25,7 @@
       }
       header h1 {
         margin: auto;
+        display: inline-flex;
       }
 
       .wrapper {
@@ -38,7 +40,7 @@
         display: inline-block;
         text-align: left;
         height: 1000px;
-        margin: 5px;
+        margin: 10px;
         border-radius: 100%;
         padding: 100px 200px 100px 200px;
         border: 1px solid black;
@@ -49,7 +51,6 @@
       div main div {
         width: 600px;
       }
-
       .twit {
         font-size: 80%;
         padding: 100px 250px;
@@ -58,13 +59,20 @@
         /* max-width: fit-content; */
         background-color: rgba(128, 128, 128, 0.503);
       }
+
+      .logo {
+        width: 5%;
+        height: 5%;
+        margin: 10px;
+      }
+
       .icon {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30%;
       }
       .icon-g {
-        width: 50px;
-        height: 20px;
+        width: 90px;
+        height: 30px;
       }
 
       ul {
@@ -84,6 +92,7 @@
   </head>
   <body>
     <header>
+      <img class="logo" src="logo.png" alt="logo" />
       <h1>おおものです</h1>
       <hr />
     </header>
@@ -173,8 +182,13 @@
     </div>
 
     <footer>
-      <p>&copy;oomono.com</p>
-      <p>お問い合わせはこちらまで</p>
+      <img src="logo.png" alt="logo" style="width: 50px; height: 50px" />
+      <span style="font-size: 150%">
+        <b>おおものです</b>
+      </span>
+      <br />
+      <span>&copy;oomono.com</span>
+      <span>お問い合わせはこちらまで</span>
       <a href="mailto:s57506ko@gmail.com">メールを送る</a>
     </footer>
 
@@ -193,4 +207,3 @@
     </script>
   </body>
 </html>
-
