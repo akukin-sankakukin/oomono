@@ -5,10 +5,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <title>おおもの</title>
+    <style>
+      .star::marker {
+        color: rgb(252, 84, 112);
+        content: "★";
+      }
+      .normal::marker {
+        content: "・";
+      }
+      body {
+        text-align: center;
+        font-size: 120%;
+      }
+      header {
+        background-color: gray;
+        font-size: 140%;
+        background-attachment: fixed;
+      }
+      header h1 {
+        margin: auto;
+      }
+
+      .wrapper {
+        /* display: flex; */
+        /* justify-content: center; 中央揃え */
+        /* align-items: stretch; 高さを揃える */
+        gap: 20px; /* main要素間の間隔 */
+        padding: 10px;
+      }
+
+      main {
+        display: inline-block;
+        text-align: left;
+        height: 1000px;
+        margin: 0px;
+        border-radius: 100%;
+        padding: 200px 200px;
+        border: 1px solid black;
+        /* flex: 1; 高さを揃えるためにflexを使う */
+        flex: 1; /* 高さを揃えるためにflexを使う */
+        box-sizing: border-box;
+      }
+      div main div {
+        width: 600px;
+      }
+
+      .twit {
+        font-size: 80%;
+        padding: 100px 250px;
+      }
+      h3 {
+        /* max-width: fit-content; */
+        background-color: rgba(128, 128, 128, 0.503);
+      }
+      .icon {
+        width: 15px;
+        height: 15px;
+      }
+      .icon-g {
+        width: 50px;
+        height: 15px;
+      }
+
+      ul {
+        display: inline-block;
+        text-align: left;
+      }
+
+      footer {
+        background-color: gray;
+        max-height: fit-content;
+        border-radius: 100vh;
+        border: 1px solid black;
+      }
+
+      /* スマホ用ヘッダのスタイル*/
+    </style>
   </head>
   <body>
-    <h1>おおものです</h1>
-    <hr />
-    <p>いろいろ作っています。</p>
+    <header>
+      <h1>おおものです</h1>
+      <hr />
+    </header>
+
+    <div>
+      <main>
+        <div>
+          <h3>自己紹介</h3>
+          <p>
+            高専にいる暇人です<br />
+            基本的に何もしてないです<br />
+            何も考えてないです<br />
+            近々スマホゲームのリリースを予定しています
+          </p>
+        </div>
+
+        <div id="wrapper">
+          <h3>Link</h3>
+          <span>
+            <img
+              class="icon-g"
+              src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x_r5.png"
+              alt="gmail"
+            />
+            : s57506ko@gmail.com</span
+          ><br />
+          <a href="https://github.com/akukin-sankakukin">
+            <img
+              class="icon"
+              src="https://avatars.githubusercontent.com/u/170900203?v=4"
+              alt="あくきん三角筋"
+            />
+            仕事用：あくきん三角筋 </a
+          ><br />
+          <a href="https://github.com/mare-170">
+            <img
+              class="icon"
+              src="https://avatars.githubusercontent.com/u/111253886?v=4"
+              alt="海さん"
+            />
+            趣味用：海さん</a
+          ><br />
+          <a href="https://x.com/koukai_mare"
+            ><img
+              class="icon"
+              src="https://about.x.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png"
+              alt="X:限界のおもちだよ"
+            />：限界のおもちだよ</a
+          >
+        </div>
+
+        <div>
+          <h3>備考</h3>
+          <p>
+            いろいろ作っています。<br />
+            いいと思ったものにはチェックを入れてください!<br />
+            マーカーに★が付きます。
+          </p>
+          <ul id="c1">
+            【いい言葉】
+            <li class="normal">筋肉は世界を救う</li>
+            <li class="normal">ボブは最強</li>
+            <li class="normal">明日の自分が何とかする</li>
+          </ul>
+        </div>
+      </main>
+
+      <main class="twit">
+        <h3>おおものですのツイート</h3>
+        <blockquote class="twitter-tweet">
+          <p lang="ja" dir="ltr">
+            三ツ矢なんかちっちゃい
+            <a href="https://t.co/ibpyecIWmM">pic.twitter.com/ibpyecIWmM</a>
+          </p>
+          &mdash; 限界なおもちだよ (@koukai_mare)
+          <a
+            href="https://twitter.com/koukai_mare/status/1662822302969643008?ref_src=twsrc%5Etfw"
+            >May 28, 2023</a
+          >
+        </blockquote>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+      </main>
+    </div>
+
+    <footer>
+      <p>&copy;oomono.com</p>
+      <p>お問い合わせはこちらまで</p>
+      <a href="mailto:s57506ko@gmail.com">メールを送る</a>
+    </footer>
+
+    <script>
+      document.querySelectorAll("#c1 li").forEach((v) => {
+        v.addEventListener("click", () => {
+          if (v.classList.contains("star")) {
+            v.classList.remove("star");
+            v.classList.add("normal");
+          } else {
+            v.classList.remove("normal");
+            v.classList.add("star");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
+
